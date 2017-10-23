@@ -22,3 +22,9 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+li div {
+  display: inline-block;
+  width: 30%;
+  padding: 1%;
+}

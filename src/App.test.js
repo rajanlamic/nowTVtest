@@ -2,7 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
-it('should render without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App.WrappedComponent />, div);
-});
+describe('App', () => {
+	it('should render without crashing', () => {
+	  const div = document.createElement('div');
+	  const defaultProps = {
+	  	getChatLog: jest.fn()
+	  }
+	  ReactDOM.render(<App.WrappedComponent {...defaultProps} />, div);
+	});
+})
+
+
